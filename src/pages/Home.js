@@ -44,9 +44,9 @@ const courses = [
   {
     id: 1,
     code: "Ph.D",
-    place: "Indian Institute of Technology Guwahati, Assam, India",
+    place: "Indian Institute of Technology Guwahati, Assam, India,",
     year: "2025",
-    credits: 4,
+    title: '(Performance and Lifetime Enhancement of Non-Volatile Memory Caches , Advisor - Dr. John Jose)',
     type: "Computer Science and Engineering,",
   },
   {
@@ -55,7 +55,7 @@ const courses = [
     place:
       "Cochin University of Science and Technology (CUSAT), Kochi, Kerala, India",
     year: "2016",
-    credits: 4,
+    title: '',
     type: "Computer Science and Engineering,",
   },
   {
@@ -64,7 +64,7 @@ const courses = [
     place:
       "Cochin University of Science and Technology (CUSAT), Kochi, Kerala India",
     year: "2013",
-    credits: 3,
+    title: '',
     type: "Electronics and Communication Engineering,",
   },
   {
@@ -72,7 +72,7 @@ const courses = [
     code: "Higher Secondary Examination (Technical)",
     place: "Model Technical HSS, Kaloor, Kerala",
     year: "2008",
-    credits: 3,
+    title: '',
     type: "",
   },
   {
@@ -80,7 +80,7 @@ const courses = [
     code: "Technical High School Leaving Certificate",
     place: "Model Technical HSS, Kaloor,Kerala",
     year: "2006",
-    credits: 3,
+    title: '',
     type: "",
   },
 ];
@@ -129,22 +129,20 @@ function Home() {
 
                 <Typography variant="body1">IIT Guwahati, Assam</Typography>
 
-                <Typography mt={2}>
-                  Thesis title: Performance and Lifetime Enhancement of
-                  Non-Volatile Memory Caches
-                </Typography>
+              
 
                 {/* Contact Info */}
                 <Box
+                mt={1}
                   display="flex"
                   flexDirection={{ xs: "column", sm: "row", md: "row" }} // Mobile → column, Desktop → row
                   alignItems={{ xs: "flex-start", sm: "center" }}
                   justifyContent="flex-start"
-                  gap={3}
+                  gap={{ xs: 1, sm: 2, md: 3 }}
                 >
                   {/* Email */}
-                  <Box display="flex" alignItems="center" gap={1}>
-                    <EmailIcon sx={{ color: "#003366", fontSize: 20 }} />
+                  <Box display="flex" alignItems="center">
+                    <EmailIcon sx={{ color: "#003366", fontSize: 20, mr: 1 }} />
 
                     <Link
                       href="mailto:siva17191@gmail.com"
@@ -189,6 +187,7 @@ function Home() {
                         color: "#003366",
                         fontWeight: 500,
                         "&:hover": { textDecoration: "underline" },
+                        mt: "3px", // Add top margin on mobile
                       }}
                     >
                       linkedin.com/in/sivakumar
@@ -314,6 +313,7 @@ function Home() {
                       <TableCell>
                         {course.type}
                         <div>{course.place}</div>
+                        <div>{course.title}</div>
                       </TableCell>
                       <TableCell>{course.year}</TableCell>
                     </TableRow>
