@@ -109,6 +109,12 @@ const conferences = [
     link: "https://dl.acm.org/doi/10.1145/3453688.3461488",
   },
 ];
+const handleScroll = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 
 function Research() {
@@ -270,21 +276,25 @@ function Research() {
         
       </Box>
       {/* ================= NAVBAR ================= */}
+   
+
       <Box mt={4} mb={4} textAlign="center">
-        <a
-          href="#journals"
-          style={{ ...navLink, color: "blue", fontSize: "16px" }}
-        >
-          Journal Publications
-        </a>
-        {""}||{" "}
-        <a
-          href="#conference"
-          style={{ ...navLink, color: "blue", fontSize: "16px" }}
-        >
-          Conference Publications
-        </a>
-      </Box>
+  <Typography
+    component="span"
+    sx={{ cursor: "pointer", color: "primary.main", fontSize: 18, mx: 2 }}
+    onClick={() => handleScroll("journals")}
+  >
+    Journal Publications
+  </Typography>
+ {""}||{" "}
+  <Typography
+    component="span"
+    sx={{ cursor: "pointer", color: "primary.main", fontSize: 18, mx: 2 }}
+    onClick={() => handleScroll("conference")}
+  >
+    Conference Publications
+  </Typography>
+</Box>
 
       {/* Journal Publications */}
       <Box mt={4} id="journals">
