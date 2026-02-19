@@ -353,7 +353,7 @@ function Research() {
 
       {/* ================= CONFERENCE ================= */}
 
-      <Box mt={4} id="journals">
+      <Box mt={4} id="conference">
         <Typography
           variant="h5"
           gutterBottom
@@ -417,7 +417,7 @@ function Research() {
         </TableContainer>
       </Box>
 
-      {/* Projects */}
+      {/* Projects 
       <Box mb={4} sx={{ mt: 6 }}>
         <Typography
           variant="h5"
@@ -457,7 +457,7 @@ function Research() {
             </Card>
           </Grid>
         </Grid>
-      </Box>
+      </Box>*/}
     </Container>
   );
 }
