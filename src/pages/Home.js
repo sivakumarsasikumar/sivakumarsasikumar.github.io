@@ -111,7 +111,16 @@ function Home() {
                 <Typography variant="h4">Sivakumar S</Typography>
 
                 <Typography variant="h6" color="text.secondary">
-                  Senior Engineer, <Link href="https://www.vayavyalabs.com/" target="_blank" underline="none" sx={{ color: "#003366" }}>Vayavya Labs Pvt. Ltd.</Link> (Bangalore)
+                  Senior Engineer,{" "}
+                  <Link
+                    href="https://www.vayavyalabs.com/"
+                    target="_blank"
+                    underline="none"
+                    sx={{ color: "#003366" }}
+                  >
+                    Vayavya Labs Pvt. Ltd.
+                  </Link>{" "}
+                  (Bangalore)
                 </Typography>
 
                 <Typography variant="body1" mt={1}>
@@ -132,7 +141,6 @@ function Home() {
                   alignItems={{ xs: "flex-start", sm: "center" }}
                   justifyContent="flex-start"
                   gap={3}
-            
                 >
                   {/* Email */}
                   <Box display="flex" alignItems="center" gap={1}>
@@ -142,7 +150,7 @@ function Home() {
                       href="mailto:siva17191@gmail.com"
                       underline="none"
                       sx={{
-                        marginTop: '3px', // Add top margin on mobile
+                        marginTop: "3px", // Add top margin on mobile
                         color: "#003366",
                         fontWeight: 500,
                         "&:hover": { textDecoration: "underline" },
@@ -170,7 +178,7 @@ function Home() {
                   </Box>
 
                   <Box display="flex" alignItems="center" gap={1}>
-                    <LinkedInIcon sx={{ color: "#003366", fontSize: 20 ,}} />
+                    <LinkedInIcon sx={{ color: "#003366", fontSize: 20 }} />
 
                     <Link
                       href="https://www.linkedin.com/in/sivakumar-s-b8996885/"

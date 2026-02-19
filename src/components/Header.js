@@ -93,7 +93,6 @@ function Header() {
               key={item.text}
               component={NavLink}
               to={item.path}
-      
               sx={{
                 color: "#fff",
                 fontWeight: 600,
