@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 import {
   Container,
@@ -39,6 +40,10 @@ const resentNews = [
     news: "2025 : Student Research Forum (SRF), VLSID 2025, Bangalore",
     img: "",
   },
+
+  
+
+
 ];
 const courses = [
   {
@@ -46,7 +51,8 @@ const courses = [
     code: "Ph.D",
     place: "Indian Institute of Technology Guwahati, Assam, India,",
     year: "2025",
-    title: '(Performance and Lifetime Enhancement of Non-Volatile Memory Caches , Advisor - Dr. John Jose)',
+    title:
+      "(Performance and Lifetime Enhancement of Non-Volatile Memory Caches , Advisor - Dr. John Jose)",
     type: "Computer Science and Engineering,",
   },
   {
@@ -55,7 +61,7 @@ const courses = [
     place:
       "Cochin University of Science and Technology (CUSAT), Kochi, Kerala, India",
     year: "2016",
-    title: '',
+    title: "",
     type: "Computer Science and Engineering,",
   },
   {
@@ -64,7 +70,7 @@ const courses = [
     place:
       "Cochin University of Science and Technology (CUSAT), Kochi, Kerala India",
     year: "2013",
-    title: '',
+    title: "",
     type: "Electronics and Communication Engineering,",
   },
   {
@@ -72,7 +78,7 @@ const courses = [
     code: "Higher Secondary Examination (Technical)",
     place: "Model Technical HSS, Kaloor, Kerala",
     year: "2008",
-    title: '',
+    title: "",
     type: "",
   },
   {
@@ -80,11 +86,12 @@ const courses = [
     code: "Technical High School Leaving Certificate",
     place: "Model Technical HSS, Kaloor,Kerala",
     year: "2006",
-    title: '',
+    title: "",
     type: "",
   },
 ];
 function Home() {
+  const [showAll, setShowAll] = useState(false);
   return (
     <>
       <StyledComponent>
@@ -129,11 +136,9 @@ function Home() {
 
                 <Typography variant="body1">IIT Guwahati, Assam</Typography>
 
-              
-
                 {/* Contact Info */}
                 <Box
-                mt={1}
+                  mt={1}
                   display="flex"
                   flexDirection={{ xs: "column", sm: "row", md: "row" }} // Mobile → column, Desktop → row
                   alignItems={{ xs: "flex-start", sm: "center" }}
@@ -240,7 +245,6 @@ function Home() {
               sx={{
                 fontWeight: 600,
                 mb: 2,
-                // color: "#003366",
               }}
             >
               News & Updates
@@ -250,29 +254,51 @@ function Home() {
             <Box
               sx={{
                 maxHeight: "300px",
-                overflowY: "auto",
+                overflowY: showAll ? "auto" : "hidden",
               }}
             >
-              {resentNews?.map((item, index) => (
-                <Typography
-                  key={index}
-                  sx={{
-                    mb: 1.2,
-                    fontSize: "1rem",
-                    lineHeight: 1.6,
-                  }}
-                >
-                  • {item.news}
-                  {item.img && (
-                    <img
-                      src={item.img}
-                      alt="new"
-                      style={{ width: "40px", marginLeft: "8px" }}
-                    />
-                  )}
-                </Typography>
-              ))}
+              {(showAll ? resentNews : resentNews?.slice(0, 7))?.map(
+                (item, index) => (
+                  <Typography
+                    key={index}
+                    sx={{
+                      mb: 1.2,
+                      fontSize: "1rem",
+                      lineHeight: 1.6,
+                    }}
+                  >
+                    • {item.news}
+                    {item.img && (
+                      <img
+                        src={item.img}
+                        alt="news"
+                        style={{ width: "40px", marginLeft: "8px" }}
+                      />
+                    )}
+                  </Typography>
+                ),
+              )}
             </Box>
+
+            {/* See More / Less Button */}
+            {resentNews?.length > 7 && (
+              <Typography
+                onClick={() => setShowAll(!showAll)}
+                sx={{
+                  mt: 1.5,
+                  color: "#003366",
+                  cursor: "pointer",
+                  fontWeight: 500,
+                  display: "inline-block",
+
+                  "&:hover": {
+                    textDecoration: "underline",
+                  },
+                }}
+              >
+                {showAll ? "See Less ▲" : "See More ▼"}
+              </Typography>
+            )}
           </Box>
 
           {/* Page Title */}

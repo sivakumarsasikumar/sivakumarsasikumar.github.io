@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, HashRouter,Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-
+import ScrollToTopButton from "./components/ScrollToTopButton";
 import Home from "./pages/Home";
 import Research from "./pages/Research";
 import Courses from "./pages/Courses";
@@ -39,6 +39,7 @@ function App() {
 
         {/* Footer */}
         <Footer />
+        <ScrollToTopButton />
 
       </div>
 
