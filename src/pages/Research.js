@@ -313,7 +313,7 @@ function Research() {
         <TableContainer component={Paper} sx={{ overflowX: "auto" }}>
           <Table>
             {/* Table Head */}
-            <TableHead sx={{ backgroundColor: "#f4f6f8" }}>
+            <TableHead sx={{ backgroundColor: '#1976d221' }}>
               <TableRow>
                 <TableCell>
                   <b>Sl.No</b>
@@ -380,7 +380,10 @@ function Research() {
         <TableContainer component={Paper} sx={{ overflowX: "auto" }}>
           <Table>
             {/* Table Head */}
-            <TableHead sx={{ backgroundColor: "#f4f6f8" }}>
+            <TableHead sx={{ backgroundColor: '#1976d221' }}
+            // sx={{ backgroundColor: "#f4f6f8" }}
+            
+            >
               <TableRow>
                 <TableCell>
                   <b>Sl.No</b>

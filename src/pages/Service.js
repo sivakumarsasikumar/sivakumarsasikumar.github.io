@@ -137,7 +137,8 @@ function Service() {
               "& th": {
                 fontSize: "1rem",
                 fontWeight: "600",
-                backgroundColor: "#f5f7fa",
+
+                
               },
 
               "& td": {
@@ -146,7 +147,7 @@ function Service() {
             }}
           >
             {/* Table Header */}
-            <TableHead>
+            <TableHead sx={{ backgroundColor: '#1976d221' }}>
               <TableRow>
                 <TableCell>Category</TableCell>
                 <TableCell>Organization</TableCell>

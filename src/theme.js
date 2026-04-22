@@ -13,6 +13,13 @@ const theme = createTheme({
         },
       },
     },
+    MuiTableHead: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#1976d221',
+        },
+      },
+    },
   },
 });
 

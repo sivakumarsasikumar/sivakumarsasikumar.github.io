@@ -32,7 +32,7 @@ const StyledComponent = styled("div")((props) => ({
 const resentNews = [
   {
     id: 1,
-    news: "2026 : PhD Forum, VLSID 2026, Pune (Accepted)",
+    news: "2026 : PhD Forum, VLSID 2026, Pune",
     img: newGif,
   },
   {
@@ -221,8 +221,7 @@ function Home() {
               Early-career academic and researcher with a Ph.D. in Computer
               Science and Engineering from IIT Guwahati, specializing in
               Computer Architecture, performance and lifetime enhancement of
-              Non-Volatile Memory (NVM) systems. Author of peer‑reviewed
-              publications in ACM TODAES and IEEE/IFIP conferences.
+              Non-Volatile Memory (NVM) systems.
             </Typography>
             <Typography sx={{ mt: 1 }}>
               Experienced in teaching, supervising student projects, and
@@ -235,7 +234,7 @@ function Home() {
               mt: 4,
               p: 3,
               border: "1px solid #999",
-              backgroundColor: "#f4f6f8", // Light yellow
+              backgroundColor: "#1976d221", // Light yellow
               borderRadius: 1,
             }}
           >
@@ -330,6 +329,7 @@ function Home() {
                   },
                 }}
               >
+                
                 <TableBody>
                   {courses.map((course) => (
                     <TableRow key={course.id} hover>

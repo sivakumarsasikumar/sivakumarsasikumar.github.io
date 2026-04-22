@@ -53,7 +53,7 @@ function Courses() {
       <Box>
         <TableContainer component={Paper}>
           <Table>
-            <TableHead sx={{ backgroundColor: "#f4f6f8" }}>
+            <TableHead sx={{ backgroundColor: "#1976d221" }}>
               <TableRow>
                 {/* <TableCell><b>Course Code</b></TableCell> */}
                 <TableCell>

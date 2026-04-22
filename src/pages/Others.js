@@ -18,7 +18,7 @@ function Others() {
   const talks_presentation = [
     {
       id: 1,
-      text: "PhD Forum, VLSID 2026, Pune (Accepted)",
+      text: "PhD Forum, VLSID 2026, Pune",
     },
     {
       id: 2,
