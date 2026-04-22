@@ -20,14 +20,14 @@ function Courses() {
       id: 1,
       code: "",
       name: "Electronic Product Design",
-      semester: "Semester 7",
+      semester: "7",
       year: "2016",
     },
     {
       id: 2,
       code: " ",
       name: "Digital Electronics Laboratory",
-      semester: "Semester 3",
+      semester: "3",
       year: "2016",
     },
   ];

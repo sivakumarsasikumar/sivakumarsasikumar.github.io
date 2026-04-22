@@ -32,12 +32,12 @@ const StyledComponent = styled("div")((props) => ({
 const resentNews = [
   {
     id: 1,
-    news: "2026 : PhD Forum, VLSID 2026, Pune",
+    news: "2026 : PhD Forum, VLSID 2026,Pune",
     img: newGif,
   },
   {
     id: 2,
-    news: "2025 : Student Research Forum (SRF), VLSID 2025, Bangalore",
+    news: "2025 : Student Research Forum (SRF),VLSID 2025,Bangalore",
     img: "",
   },
 
